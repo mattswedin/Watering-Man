@@ -41,5 +41,5 @@ Thursday morning - upload
 
     SCORECARD:
 
-    https://docs.google.com/spreadsheets/d/1rOdm_M1IehMzErycZUSIH4g-DYQsnlX9MO5ObHl0-CU/edit#gid=80636460
+    https://docs.google.com/spreadsheets/d/1rOdm_M1IehMzErycZUSIH4g-DYQsnlX9MO5ObHl0-CU/edit?usp=sharing
 

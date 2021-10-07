@@ -37,3 +37,9 @@ Wednesday - add music, sound effects, images
 
 Thursday morning - upload
 
+
+
+    SCORECARD:
+
+    https://docs.google.com/spreadsheets/d/1rOdm_M1IehMzErycZUSIH4g-DYQsnlX9MO5ObHl0-CU/edit#gid=80636460
+

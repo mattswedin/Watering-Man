@@ -28,7 +28,6 @@ In Watering Man, users will be able to:<br>
 ### WIREFRAME
 <br>
 
-https://wireframe.cc/LAV909<br>
 <img width="803" alt="Screen Shot 2021-10-08 at 2 32 50 PM" src="https://user-images.githubusercontent.com/88504868/136609086-ef8c3ab4-d061-47d1-a92f-c59ddc6069bf.png">
 
 

@@ -27,8 +27,9 @@ In Watering Man, users will be able to:<br>
 
 ### WIREFRAME
 <br>
-https://wireframe.cc/LAV909
+https://wireframe.cc/LAV909<br>
 <br>
+
 - Navlinks include links to this project's Github repo, my LinkedIn and personal Website, and the About modal.<br>
 
 - Controls will include Pause, and Reset buttons, as well as which keys to use to control the Player.<br>

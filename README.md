@@ -17,10 +17,10 @@ FUNCTIONALITY & MVPs
 
 In Watering Man, users will be able to:
 
-Compete in timed challenges
-Jump, Run, and Shoot liquids
-Fight flower demons
-Fight a boss
+Compete in timed challenges, 
+Jump, Run, and Shoot liquids, 
+Fight flower demons, 
+Fight a boss, 
 
 
 

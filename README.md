@@ -8,13 +8,7 @@
 
 BACKGROUND
 
-Watering Man is a simple 2D platforming game. The controls are run, jump, and shoot. In this snippet of the game, flower demons are breaking into your house and you must vaquish them. Watering Man can fill his watering can head with many different liquids. In this case it is vinegar because these flower demons need to be dried up and destroyed. 
-
-Once you get out of your house and reach the garden, there will be even MORE demon plants and flowers. If any insects have injested infected plant bits they will also become demons. At the end of the garden level you will need to face a giant enemy demon mantis to offically complete the game.
-
-
-
-
+Watering Man is a simple 2D platforming game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vaquish them. Using water, Watering man is able to free the possessed flowers from the demonic hold controlling them. Shoot all the flower demons to proceed to the next level.
 
 
 
@@ -23,7 +17,7 @@ FUNCTIONALITY & MVPs
 
 In Watering Man, users will be able to:
 
-Enjoy an engaging story
+Compete in timed challenges
 Jump, Run, and Shoot liquids
 Fight flower demons
 Fight a boss

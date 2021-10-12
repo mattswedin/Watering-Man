@@ -1,10 +1,15 @@
 {
-  "name": "Watering_Man",
+  "name": "my_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
@@ -14,20 +19,15 @@
     "@babel/preset-env": "^7.15.8",
     "babel-loader": "^8.2.2",
     "core-js": "^3.18.2",
+    "crypto": "^1.0.1",
     "css-loader": "^6.3.0",
     "mini-css-extract-plugin": "^2.4.2",
+    "path": "^0.12.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
-    "webpack": "^5.58.0",
+    "stream": "0.0.2",
+    "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
-  }
-
-  "browserslist": [
-    "defaults"
-  ],
-  "scripts": {
-    "watch": "webpack --watch --mode=development",
-    "build": "webpack --mode=production"
   }
 }

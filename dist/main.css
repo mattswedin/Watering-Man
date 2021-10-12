@@ -1,0 +1,70 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+
+#bottom {
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  color: white;
+  margin-top: 20px;
+}
+
+#github {
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  color: white;
+  margin-left: 410px;
+}
+
+#portfolio{
+
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  color: white;
+  margin-left: 40px;
+
+}
+
+
+
+
+body.bg {
+  background-color: black;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+div.outer {
+  vertical-align: middle; 
+  display: flex;
+  top: 50%;
+  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+div.inner {
+  top: 50%;
+  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+}
+       
+/* div > #watering_man {
+  
+}; */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}

@@ -1,10 +1,10 @@
-import Platforms from './platforms';
+import Overlay from './overlay';
 import WateringMan from './watering_man';
+import Demon from './demon';
+import Demon2 from './demon2';
+import {health} from './demon';
 
-const platform1 = new Platforms(968, 632, 65, 460, 300);
-const platform2 = new Platforms(968, 632, 440, 440, 130);
-const platform3 = new Platforms(968, 632, 575, 200, 200);
-const platform4 = new Platforms(968, 632, 850, 382, 50);
+
 
 export default class Game {
     constructor(canvas) {
@@ -12,22 +12,44 @@ export default class Game {
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;
         this.wateringman = new WateringMan(this.canvasWidth, this.canvasHeight);
+        this.demon = []
+        this.overlay = new Overlay(this.canvasWidth, this.canvasHeight)
     }
 
+    makeDemon(){
+        this.demon.push(new Demon(this.canvasWidth, this.canvasHeight, this.wateringman))
+    }
 
+    
 
     start(){
-        
         requestAnimationFrame(this.start.bind(this));
-        // this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
-        this.wateringman.update()
-        platform1.draw(this.ctx)
-        platform2.draw(this.ctx)
-        platform3.draw(this.ctx)
-        platform4.draw(this.ctx)
+        this.overlay.draw()
+        this.wateringman.update();
+        this.demon[0].update(this.wateringman);
+        
+
+        if (this.demon[0].life() === false) {
+            this.demon.splice(0, 1)
+            console.log('hi')
+            this.demon.push(new Demon2(this.canvasWidth, this.canvasHeight, this.wateringman))
+        }
+
+        
+        // platform1.draw(this.ctx);
+        // platform2.draw(this.ctx);
+        // platform3.draw(this.ctx);
+        // platform4.draw(this.ctx);
     }
 
+
 };
+
+
+
+
+
+// export { platform1, platform2, platform3, platform4 };
 
 
 

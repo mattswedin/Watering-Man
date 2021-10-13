@@ -2,9 +2,11 @@
 // import {wateringMan} from './watering_man'
 
 import Game from "./game.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 const canvas = document.getElementById('canvas');
 const game = new Game(canvas);
+game.makeDemon()
 game.start()
 })
 

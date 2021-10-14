@@ -1,7 +1,7 @@
 class Sound {
     constructor(filename) {
         this.sound = document.createElement("audio");
-        this.sound.src = 'src/assets/WATERINGMAN.mp3';
+        this.sound.src = '';
         this.sound.setAttribute('preload', 'auto');
         this.sound.volume = 0.2;
         //  Specifies that audio controls should be displayed (such as a play/pause button etc)

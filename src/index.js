@@ -1,14 +1,14 @@
 // import { plats } from './platforms';
 // import {wateringMan} from './watering_man'
-import Sound from './sound.js'
+// import Sound from './sound.js'
 
 import Game from "./game.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 const canvas = document.getElementById('canvas');
 const startmenu = document.getElementById('startmenu');
-const sound = new Sound()
-const game = new Game(canvas, sound);
+// const sound = new Sound()
+const game = new Game(canvas);
 startmenu.addEventListener("click", function (e) {
     canvas.style.display = 'block';
     startmenu.style.display = 'none';

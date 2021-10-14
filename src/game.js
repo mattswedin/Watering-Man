@@ -9,7 +9,7 @@ import HealthBar from './healthBar';
 
 
 export default class Game {
-    constructor(canvas, sound) {
+    constructor(canvas) {
         this.ctx = canvas.getContext("2d");
         this.canvasWidth = canvas.width;
         this.canvasHeight = canvas.height;

@@ -177,7 +177,7 @@ export default class WateringMan{
 
     ouch(){
         canHurt = true
-        this.imgSrc = "../src/assets/watering_man/wm_hit_r.png"
+        this.imgSrc = "src/assets/watering_man/wm_hit_r.png"
         this.health.splice(0, 1)
         setTimeout(function () {
             canHurt = false;
@@ -187,8 +187,9 @@ export default class WateringMan{
 
     gameover(){
         if (this.health.length === 0){
+            refreshPage()
             alert("GAME OVER");
-            return true;
+                
         }
     }
 
@@ -262,6 +263,10 @@ export default class WateringMan{
         this.gameover()
         
     }   
+}
+
+function refreshPage() {
+    window.location.reload();
 }
 
 

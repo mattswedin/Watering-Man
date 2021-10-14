@@ -51,6 +51,7 @@ export default class Game {
         if (this.demon[0].life() === false && this.demon[0] === dave){
             this.demon.splice(0, 1)
             // this.sound.stop()
+            refreshPage()
             alert('YOU HAVE WON WATERING MAN. CONGRATULATIONS. WATERING MAN MAY NOW GO BACK TO GARDENING IN PEACE')
         }
 
@@ -65,6 +66,12 @@ export default class Game {
 
 
 };
+
+function refreshPage() {
+    window.location.reload();
+}
+
+
 
 
 

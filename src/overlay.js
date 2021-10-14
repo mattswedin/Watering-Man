@@ -1,5 +1,5 @@
 
-export default class Overlay {
+export default class Overlayy {
     constructor(canvasWidth, canvasHeight) {
         const canvas = document.getElementById("canvas");
         this.ctx = canvas.getContext("2d");
@@ -15,7 +15,7 @@ export default class Overlay {
         let that = this;
         bg.onload = function () {
             // that.ctx.clearRect(0, 0, that.canvasWidth, that.canvasHeight)
-            that.ctx.drawImage(bg, 100, 100, that.width, that.height);
+            that.ctx.drawImage(bg, 0, 0, 968, 632);
         }
     };
 };

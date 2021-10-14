@@ -25,6 +25,16 @@
 
 }
 
+#startmenu{
+  width: 968px;
+  height: 632px;
+  align-self: center;
+  background-image: url("/Users/matthewswedin/Desktop/App_Academy/Watering_Man/src/assets/backgrounds/start-min.png");
+  background-size: cover;
+  display: block;
+  
+}
+
 #canvas{
   width: 968px;
   height: 632px;
@@ -32,6 +42,7 @@
   background-image: url("/Users/matthewswedin/Desktop/App_Academy/Watering_Man/src/assets/backgrounds/sweet.png");
   background-size: cover;
   z-index: 0;
+  display: none;
 }
 
 

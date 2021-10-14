@@ -1,11 +1,10 @@
-
 import { canHurt } from './watering_man'
 
 import { isShooting } from './drop';
 
-let health = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+let health = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,]
 
-export default class Demon2 {
+export default class Demon3 {
     constructor(canvasWidth, canvasHeight, wateringman) {
         const canvas = document.getElementById("canvas");
         this.ctx = canvas.getContext("2d");
@@ -16,7 +15,7 @@ export default class Demon2 {
         this.x = 900;
         this.y = -300;
         this.vel = { x: 0, y: 0 }
-        this.imgSrc = "src/assets/demons/tulipDemon_r.png"
+        this.imgSrc = "src/assets/demons/scarydemon_r-min.png"
         this.wateringman = wateringman;
 
 
@@ -41,18 +40,18 @@ export default class Demon2 {
         this.vel.y *= 0.1;
 
         if ((this.wateringman.x) > this.x + 230 && !isShot) {
-            this.imgSrc = "src/assets/demons/tulipDemon_r.png"
-            this.vel.x += 2;
+            this.imgSrc = "src/assets/demons/scarydemon_r-min.png"
+            this.vel.x += 5;
         }
         if ((this.wateringman.x) < this.x + 230 && !isShot) {
-            this.imgSrc = "src/assets/demons/tulipDemon_l.png"
-            this.vel.x -= 2;
+            this.imgSrc = "src/assets/demons/scarydemon_l-min.png"
+            this.vel.x -= 5;
         }
         if ((this.wateringman.y - 300) > this.y && !isShot) {
-            this.vel.y += 2;
+            this.vel.y += 5;
         }
         if ((this.wateringman.y - 300) < this.y && !isShot) {
-            this.vel.y -= 2;
+            this.vel.y -= 5;
         };
 
 
@@ -79,14 +78,14 @@ export default class Demon2 {
         isShot = true;
 
         if (this.wateringman.facingRight) {
-            this.imgSrc = 'src/assets/demons/tulipDemon_hit_l.png'
+            this.imgSrc = 'src/assets/demons/scarydemon_hit_l-min.png'
             this.x += 30
             console.log(health)
             health.splice(0, 1)
 
         } else if (this.wateringman.facingRight === false) {
             this.x -= 30
-            this.imgSrc = 'src/assets/demons/tulipDemon_hit_r.png'
+            this.imgSrc = 'src/assets/demons/scarydemon_hit_r-min.png'
             console.log(health)
             health.splice(0, 1)
         }
@@ -125,6 +124,4 @@ export default class Demon2 {
 };
 
 let isShot = false
-
-
 

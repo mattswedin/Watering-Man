@@ -1,5 +1,6 @@
 import WateringMan from "./watering_man";
 import {isShooting} from './drop';
+import {canHurt} from './watering_man'
 
 let health = [1, 1, 1, 1, 1, 1]
 
@@ -40,17 +41,17 @@ export default class Demon {
 
         if ((this.wateringman.x) > this.x + 230 && !isShot){
             this.imgSrc = "src/assets/demons/glowingdemon_l.png"
-            this.vel.x += .5;
+            this.vel.x += 1.2;
         }
         if ((this.wateringman.x) < this.x + 230 && !isShot){
             this.imgSrc = "src/assets/demons/glowingdemon_r.png"
-            this.vel.x -= .5;
+            this.vel.x -= 1.2;
         }
         if ((this.wateringman.y - 175) > this.y && !isShot){
-            this.vel.y += .5;
+            this.vel.y += 1.2;
         }
         if ((this.wateringman.y - 175) < this.y && !isShot) {
-            this.vel.y -= .5;
+            this.vel.y -= 1.2;
         };
     
 
@@ -99,6 +100,13 @@ export default class Demon {
         }
     }
 
+    wateringmanHit(){
+           if (this.wateringman.x >= this.x && this.wateringman.x <= this.x + 400 && this.wateringman.y >= this.y && this.wateringman.y <= this.y + 300 && !canHurt) {
+               this.wateringman.ouch()
+           }
+    }
+    
+
     
 
         
@@ -110,6 +118,7 @@ export default class Demon {
             this.move()
             this.hit()
             this.life()
+            this.wateringmanHit()
         }
     };
             

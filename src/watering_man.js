@@ -3,6 +3,7 @@
 import Drop from "./drop.js"
 let keys = {}
 let floor = 400
+let canHurt = false;
 
 export default class WateringMan{
     constructor(canvasWidth, canvasHeight) {
@@ -20,6 +21,7 @@ export default class WateringMan{
         this.jumping = false;
         this.facingRight = true;
         this.drop = new Drop(canvasWidth, canvasHeight, this)
+        this.health = [1, 1, 1]
     };
     
 
@@ -163,10 +165,6 @@ export default class WateringMan{
     shoot(){
 
         if (keys["Space"]) {
-            // this.shooting = true;
-
-            
-
             this.drop.shoot()
             // let that = this;
             // setTimeout(function () {
@@ -175,6 +173,23 @@ export default class WateringMan{
         }
 
 
+    }
+
+    ouch(){
+        canHurt = true
+        this.imgSrc = "/Users/matthewswedin/Desktop/App_Academy/Watering_Man/src/assets/watering_man/wm_hit_r.png"
+        this.health.splice(0, 1)
+        setTimeout(function () {
+            canHurt = false;
+        }, 2000);
+        
+    }
+
+    gameover(){
+        if (this.health.length === 0){
+            alert("GAME OVER");
+            return true;
+        }
     }
 
 
@@ -244,8 +259,12 @@ export default class WateringMan{
         this.draw()
         this.move()
         this.shoot()
+        this.gameover()
+        
     }   
 }
+
+
 
 document.addEventListener("keydown", function (e) {
     keys[e.code] = true;
@@ -253,3 +272,5 @@ document.addEventListener("keydown", function (e) {
 document.addEventListener("keyup", function (e) {
     keys[e.code] = false;
 });
+
+export {canHurt};

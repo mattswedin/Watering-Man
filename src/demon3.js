@@ -80,13 +80,13 @@ export default class Demon3 {
         if (this.wateringman.facingRight) {
             this.imgSrc = 'src/assets/demons/scarydemon_hit_l-min.png'
             this.x += 30
-            console.log(health)
+            // console.log(health)
             health.splice(0, 1)
 
         } else if (this.wateringman.facingRight === false) {
             this.x -= 30
             this.imgSrc = 'src/assets/demons/scarydemon_hit_r-min.png'
-            console.log(health)
+            // console.log(health)
             health.splice(0, 1)
         }
         setTimeout(function () {

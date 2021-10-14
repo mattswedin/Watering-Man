@@ -18,7 +18,7 @@ export default class HealthBar {
         let that = this;
         life.onload = function () {
             // that.ctx.clearRect(0, 0, that.canvasWidth, that.canvasHeight)
-            console.log(that.wateringman.health)
+            // console.log(that.wateringman.health)
             if (that.wateringman.health.length === 3){
             that.ctx.drawImage(life, 165, 75, that.x, that.y);
             that.ctx.drawImage(life, 210, 75, that.x, that.y);

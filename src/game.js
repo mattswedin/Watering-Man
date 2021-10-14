@@ -40,7 +40,7 @@ export default class Game {
         if (this.demon[0].life() === false) {
             this.demon.splice(0, 1)
             this.demon.push(kevin)
-            console.log(this.demon[0])
+            // console.log(this.demon[0])
         }
 
         if (this.demon[0].life() === false && this.demon[0] === kevin) {

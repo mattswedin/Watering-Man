@@ -177,7 +177,7 @@ export default class WateringMan{
 
     ouch(){
         canHurt = true
-        this.imgSrc = "/Users/matthewswedin/Desktop/App_Academy/Watering_Man/src/assets/watering_man/wm_hit_r.png"
+        this.imgSrc = "../src/assets/watering_man/wm_hit_r.png"
         this.health.splice(0, 1)
         setTimeout(function () {
             canHurt = false;

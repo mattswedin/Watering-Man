@@ -20,7 +20,7 @@ export default class WateringMan{
         this.draw = this.draw.bind(this);
         this.jumping = false;
         this.facingRight = true;
-        this.drop = new Drop(canvasWidth, canvasHeight, this)
+        // this.drop = new Drop(canvasWidth, canvasHeight, this)
         this.health = [1, 1, 1]
     };
     
@@ -272,7 +272,8 @@ function refreshPage() {
 
 
 document.addEventListener("keydown", function (e) {
-    keys[e.code] = true;
+   
+    keys[e.code] = true; 
 });
 document.addEventListener("keyup", function (e) {
     keys[e.code] = false;

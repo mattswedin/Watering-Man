@@ -8,7 +8,7 @@
 
 
 
-Watering Man is a boss rush / shooter game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vaquish them. Shoot all the flower demons with water drops to win!
+Watering Man is a boss rush / shooter game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vanquish them. Shoot all the flower demons with water drops to win!
 
 <br>
 <br>

@@ -1,5 +1,5 @@
 import Overlayy from './overlay';
-import { pause } from './watering_man';
+import WateringMan, { pause } from './watering_man';
 import Demon from './demon';
 import Demon2 from './demon2';
 import Demon3 from './demon3';

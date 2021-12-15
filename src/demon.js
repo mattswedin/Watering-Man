@@ -1,4 +1,4 @@
-import {pause} from "./watering_man";
+import { pause } from "./watering_man";
 import {isShooting} from './drop';
 import {canHurt} from './watering_man'
 
@@ -122,7 +122,7 @@ export default class Demon {
 
 let isShot = false
 
-export {health};
+export { health };
     
 
     

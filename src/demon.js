@@ -107,10 +107,6 @@ export default class Demon {
     }
     
 
-    
-
-        
-
     update() {
 
         if (health.length > 0) {

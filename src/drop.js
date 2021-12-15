@@ -1,3 +1,4 @@
+import { keys } from "./watering_man"
 
 export default class Drop {
     constructor(canvasWidth, canvasHeight, wateringman) {
@@ -71,6 +72,7 @@ export default class Drop {
     }
 
     shoot() {
+        
 
         if (isShooting === false){
             this.update()
@@ -78,16 +80,19 @@ export default class Drop {
 
         if (isShooting) {
             this.update()
+           let that = this
             setTimeout(function () {
-                isShooting = false
-            }, 300);
+                isShooting = false;
+                that.vel.x = 0
+                keys["Space"] = false;
+            }, 275);
         }
     }
 };
 
 let isShooting = false
 
-export {isShooting};
+export { isShooting };
 
 
 

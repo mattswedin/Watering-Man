@@ -1,12 +1,18 @@
 // import { JavascriptModulesPlugin } from "./webpack";
 // import { platform1, platform2, platform3, platform4 } from './game.js'
 import Drop from "./drop.js"
-let keys = {}
-let floor = 400
+
+let keys = {};
+let floor = 400;
 let canHurt = false;
+let pause = false;
+let pausedMusic = false
+let gameOverWm = false
+let modal = document.getElementById("myModal");
+
 
 export default class WateringMan{
-    constructor(canvasWidth, canvasHeight) {
+    constructor(canvasWidth, canvasHeight, sound) {
         const canvas = document.getElementById("canvas");
         this.ctx = canvas.getContext("2d");
         this.canvasWidth = canvasWidth;
@@ -20,18 +26,21 @@ export default class WateringMan{
         this.draw = this.draw.bind(this);
         this.jumping = false;
         this.facingRight = true;
-        // this.drop = new Drop(canvasWidth, canvasHeight, this)
+        this.drop = new Drop(canvasWidth, canvasHeight, this)
         this.health = [1, 1, 1]
+        this.sound = sound
     };
     
 
     draw() {
+        
         const wm = new Image();
         wm.src = this.imgSrc
         let that = this;
         wm.onload = function(){
             that.ctx.clearRect(0, 0, that.canvasWidth, that.canvasHeight)
             that.ctx.drawImage(wm, that.x, that.y, that.width, that.height);}
+
     };
 
     move(){
@@ -162,18 +171,12 @@ export default class WateringMan{
 
     };
 
-    shoot(){
-
-        if (keys["Space"]) {
-            this.drop.shoot()
-            // let that = this;
-            // setTimeout(function () {
-            //    that.shooting = false
-            // }, 500);
+    shoot(){ 
+        if(keys["Space"]){
+         this.drop.shoot()
         }
-
-
     }
+    
 
     ouch(){
         canHurt = true
@@ -187,96 +190,56 @@ export default class WateringMan{
 
     gameover(){
         if (this.health.length === 0){
-            refreshPage()
-            alert("GAME OVER");
-                
+            
+            this.sound.stop();
+            modal.style.display = "block";
+            pause = true;  
+            
         }
     }
-
-
-    // jump(){
-    //     let that = this
-    //     let timeID = setInterval(function(){
-    //         that.y = that.y - that.vel.y
-    //         if (that.y < 240){
-    //             clearInterval(timeID)
-    //             let timeDID = setInterval(function(){
-    //                 that.y = that.y + that.vel.y
-    //                 if (that.y > platform1.y && that.x > platform1.x && that.x < (platform1.x + platform1.length)) {
-    //                     that.y = platform1.y;
-    //                     clearInterval(timeDID)
-    //                 } else if (that.y > floor){
-    //                     console.log(platform1.y)
-    //                     that.y = floor;
-    //                     clearInterval(timeDID)
-                        
-    //                 }
-    //             }, 20)
-    //         }
-
-    //     }, 20)
-    // } 
     
-
-    // platformed(){
-    //     if (this.y >= platform1.y){
-    //         this.y = platform1.y;
-    //     } else if (this.y >= platform2.y){
-    //         this.y = platform2.y;
-    //     } else if (this.y >= platform3.y){
-    //         this.y = platform3.y;
-    //     } else if (this.y >= platform4.y){
-    //         this.y = platform4.y;
-    // }
-
-
-
-  
-
-
-        // if (keys["ArrowRight"]){
-        //     this.imgSrc = "src/assets/watering_man/wm_idle_r.png"
-        // this.x = this.x + this.vel.x
-
-        // } else if (keys["ArrowLeft"]) {
-        //     this.imgSrc = "src/assets/watering_man/wm_idle_l.png"
-        //     this.x = this.x - this.vel.x
-
-        // } else if (keys["ArrowUp"]){
-        //     this.jump()}
-            
-
-        // } else if (keys["ArrowUp"] && keys["ArrowRight"]){
-        //     this.imgSrc = "src/assets/watering_man/wm_idle_r.png"
-        //     this.x = this.x + this.vel.x
-        //     this.y = this.y - this.vel.y
-        
-        // this.y = this.y + this.vel.y;
-    
-
-    
-
     update() {
-        this.draw()
-        this.move()
-        this.shoot()
+        this.pauseMusic()
         this.gameover()
-        
-    }   
-}
 
-function refreshPage() {
-    window.location.reload();
+        if(!pause){
+            this.draw()
+            this.move()
+            this.shoot()
+            
+        }
+         
+    }
+    
+    pauseMusic(){
+        pausedMusic ? this.sound.stop() : this.sound.play()
+    }
+
+   
 }
 
 
 
 document.addEventListener("keydown", function (e) {
-   
-    keys[e.code] = true; 
-});
-document.addEventListener("keyup", function (e) {
-    keys[e.code] = false;
+    if (e.code === "ArrowUp"){keys["ArrowUp"] = true}
+    if (e.code === "ArrowRight"){keys["ArrowRight"] = true}
+    if (e.code === "ArrowLeft"){keys["ArrowLeft"] = true}
+    if (e.code === "Space"){keys["Space"] = true}
+    if (e.code === "KeyP"){!pause ? pause = true : pause = false}
+    if (e.code === "KeyS"){ pausedMusic ? pausedMusic = false : pausedMusic = true}
+    
+
 });
 
-export {canHurt};
+document.addEventListener("keyup", function (e) {
+
+    if (e.code === "ArrowUp"){keys["ArrowUp"] = false}
+    if (e.code === "ArrowRight"){keys["ArrowRight"] = false}
+    if (e.code === "ArrowLeft"){keys["ArrowLeft"] = false}
+    
+});
+
+
+
+export { canHurt, keys, pause};
+export { gameOverWm };

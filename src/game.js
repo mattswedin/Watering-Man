@@ -34,7 +34,7 @@ export default class Game {
             this.wateringman.update();
             requestAnimationFrame(this.start.bind(this));
 
-            if (!end) {
+            if (!pause) {
             this.demon[0].update(this.wateringman);
             this.overlay.draw()
             this.healthBar.draw()

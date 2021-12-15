@@ -1,4 +1,4 @@
-import WateringMan from "./watering_man";
+import {pause} from "./watering_man";
 import {isShooting} from './drop';
 import {canHurt} from './watering_man'
 
@@ -109,7 +109,7 @@ export default class Demon {
 
     update() {
 
-        if (health.length > 0) {
+        if (health.length > 0 && !pause) {
             this.draw()
             this.move()
             this.hit()

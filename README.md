@@ -8,7 +8,7 @@
 
 
 
-Watering Man is a simple 2D platforming game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vaquish them. Using water, Watering man is able to free the possessed flowers from the demonic hold controlling them. Shoot all the flower demons to proceed to the next level.
+Watering Man is a boss rush / shooter game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vaquish them. Shoot all the flower demons with water drops to win!
 
 <br>
 <br>

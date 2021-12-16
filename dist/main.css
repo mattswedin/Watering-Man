@@ -3,8 +3,10 @@
   \*************************************************************************************************************************************/
 
 #bottom {
+  margin-bottom: 20px;
   font-family:'Courier New', Courier, monospace;
   display: flex;
+  justify-content: center;
   color: white;
   margin-top: 20px;
   background-color: black;
@@ -84,7 +86,6 @@ div.outer {
   left: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
   background-color: black;
 }
 

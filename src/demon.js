@@ -65,13 +65,13 @@ export default class Demon {
     };
 
     hit(){
-        // console.log(this.wateringman.drop.x)
-        // console.log(this.x)
-
-        // if (this.wateringman.drop.x < this.x && this.wateringman.drop.x > this.x + 400 && this.wateringman.drop.y > this.y && this.wateringman.drop.y < this.y + 400){
-        if (this.wateringman.drop.x >= this.x && this.wateringman.drop.x <= this.x + 400 && this.wateringman.drop.y >= this.y && this.wateringman.drop.y <= this.y + 300 && isShooting && !isShot){
-         this.shot()
-        }
+        if (this.wateringman.drop.x >= this.x && 
+            this.wateringman.drop.x <= this.x + 400 && 
+            this.wateringman.drop.y >= this.y && 
+            this.wateringman.drop.y <= this.y + 300 && 
+            isShooting && !isShot){
+                this.shot()
+            }
     }
 
     shot(){
@@ -80,13 +80,11 @@ export default class Demon {
         if (this.wateringman.facingRight) {
             this.imgSrc = 'src/assets/demons/glowingdemon_hit_r.png'
             this.x += 30
-            // console.log(health)
             health.splice(0 , 1)
 
         } else if (this.wateringman.facingRight === false){
             this.x -= 30
             this.imgSrc = 'src/assets/demons/glowingdemon_hit_l.png'
-            // console.log(health)
             health.splice(0, 1)
         }
         setTimeout(function () {

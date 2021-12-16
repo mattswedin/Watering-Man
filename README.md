@@ -9,18 +9,17 @@
 
 
 Watering Man is a boss rush / shooter game. The controls are run, jump, and shoot. In this game, flower demons are breaking into your house and you must vanquish them. Shoot all the flower demons with water drops to win!
+<br>
+<br>
+<img width="1087" alt="Screen Shot 2021-12-16 at 11 11 17 AM" src="https://user-images.githubusercontent.com/88504868/146407944-37ca9e8f-f3eb-4a15-8cc0-d640c2128b04.png">
 
 <br>
-<br>
+
 
 ### FUNCTIONALITY & MVPs
 
-In Watering Man, users will be able to:<br>
-<br>
-- Compete in timed challenges<br>  
 - Jump, Run, and Shoot water<br>  
-- Defeat all flower demons to continue to next level<br>  
-- Fight a boss at the end of 5 levels<br>  
+- Defeat all flower demons to win<br>  
 
 <br>
 <br>

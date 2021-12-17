@@ -27,7 +27,6 @@ export default class Demon {
         let that = this;
         demon.onload = function () {
             // that.ctx.clearRect(0, 0, that.canvasWidth, that.canvasHeight)
-            
             that.ctx.drawImage(demon, that.x, that.y, that.width, that.height);}
         
     };

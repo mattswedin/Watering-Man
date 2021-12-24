@@ -10,7 +10,6 @@ const startmenu = document.getElementById('startmenu');
 const sound = new Sound()
 const game = new Game(canvas, sound);
 
-
     startmenu.addEventListener("click", function (e) {
         canvas.style.display = 'block';
         startmenu.style.display = 'none';
